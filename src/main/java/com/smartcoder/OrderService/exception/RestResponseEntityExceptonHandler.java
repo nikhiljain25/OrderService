@@ -1,6 +1,6 @@
 package com.smartcoder.OrderService.exception;
 
-import com.smartcoder.OrderService.external.client.response.ErrorResponse;
+import com.smartcoder.OrderService.external.response.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -15,6 +15,7 @@ public class RestResponseEntityExceptonHandler extends ResponseEntityExceptionHa
             return new ResponseEntity<>(ErrorResponse.builder()
                     .errorMessage(exception.getMessage())
                     .errorCode(exception.getErrorCode())
-                    .build(), HttpStatus.NOT_FOUND);
+                    .build(),
+                    HttpStatus.valueOf(exception.getStatus()));
     }
 }

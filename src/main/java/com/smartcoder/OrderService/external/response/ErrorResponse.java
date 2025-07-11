@@ -1,4 +1,4 @@
-package com.smartcoder.OrderService.external.client.response;
+package com.smartcoder.OrderService.external.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

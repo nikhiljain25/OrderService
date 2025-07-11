@@ -7,11 +7,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/*
+    * This interface is used to communicate with the Product Service.
+    * It will be called by the Order Service.
+ */
 @FeignClient(name = "PRODUCT-SERVICE/product")
 public interface ProductService {
 
     @PutMapping("/reduceQuantity/{id}")
     ResponseEntity<Void> reduceQuantity(
             @PathVariable("id") long productId,
-            @RequestParam long quantity) ;
+            @RequestParam long quantity
+    );
 }
