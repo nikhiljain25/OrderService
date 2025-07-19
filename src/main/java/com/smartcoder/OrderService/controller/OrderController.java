@@ -3,6 +3,7 @@ package com.smartcoder.OrderService.controller;
 import com.smartcoder.OrderService.model.OrderRequest;
 import com.smartcoder.OrderService.model.OrderResponse;
 import com.smartcoder.OrderService.service.OrderService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import javax.annotation.PostConstruct;
 @RestController
 @RequestMapping("/order")
 @Log4j2
+@Tag(name = "Order Service", description = "Order Service API Documentation")
 public class OrderController {
 
     @Autowired

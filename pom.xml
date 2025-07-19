@@ -82,13 +82,18 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
 		</dependency>
-        <dependency>
-            <groupId>com.smartcoder</groupId>
-            <artifactId>ProductService</artifactId>
-            <version>1.0.0</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.15</version> <!-- ✅ Stable with Spring Boot 2.7.x -->
+		</dependency>
+		<dependency>
+			<groupId>com.smartcoder</groupId>
+			<artifactId>ProductService</artifactId>
+			<version>1.0.0</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
